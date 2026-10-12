@@ -1,0 +1,254 @@
+{
+  "clusters" : [ {
+    "id" : -1,
+    "noise" : true,
+    "name" : "Støj (passer ikke i nogen klynge)",
+    "description" : "",
+    "size" : 3,
+    "conversations" : [ {
+      "id" : "VAR-001",
+      "text" : "Uønsket ventetid på reparation",
+      "explanation" : "Kunden var utilfreds med de tilgængelige tidspunkter for reparation og ønskede at tale med en medarbejder for at finde en hurtigere løsning."
+    }, {
+      "id" : "VAR-010",
+      "text" : "Usikkerhed om afhentningstidspunkt",
+      "explanation" : "Agenten kunne ikke svare på spørgsmålet om afhentningstidspunktet og viderestillede derfor for at få det afklaret."
+    }, {
+      "id" : "VAR-020",
+      "text" : "Status på reparation",
+      "explanation" : "Kunden ønskede at få opdateret status på en igangværende reparation og bad om at tale med en medarbejder."
+    } ]
+  }, {
+    "id" : 0,
+    "noise" : false,
+    "name" : "Klynge 0: Reparationsstatus-opdatering",
+    "description" : "Kunder blev viderestillet, fordi de ønskede en opdatering på en igangværende reparation, som AI-agenten ikke kunne give.",
+    "size" : 2,
+    "conversations" : [ {
+      "id" : "VAR-007",
+      "text" : "Status på reparation",
+      "explanation" : "Kunden ønskede en opdatering på en igangværende reparation, og blev derfor viderestillet."
+    }, {
+      "id" : "VAR-039",
+      "text" : "Status på reparation",
+      "explanation" : "Kunden ønskede en opdatering på en igangværende reparation, som agenten ikke havde adgang til."
+    } ]
+  }, {
+    "id" : 1,
+    "noise" : false,
+    "name" : "Klynge 1: Komplekse reparationshenvendelser",
+    "description" : "Kunderne blev viderestillet, fordi de havde komplekse reparationsbehov eller var utilfredse med AI-agentens svar og ønskede at tale med en menneskelig medarbejder.",
+    "size" : 2,
+    "conversations" : [ {
+      "id" : "VAR-022",
+      "text" : "Uklare reparationsbehov",
+      "explanation" : "Kunden beskrev et problem og ønskede at tale med en specialist for at få rådgivning om den rette løsning."
+    }, {
+      "id" : "VAR-027",
+      "text" : "Usikkerhed om reparationstid",
+      "explanation" : "Kunden ønskede information om reparationstid og kunne ikke acceptere agentens svar, hvilket førte til viderestilling."
+    } ]
+  }, {
+    "id" : 2,
+    "noise" : false,
+    "name" : "Klynge 2: Uafklarede spørgsmål og bekymringer",
+    "description" : "Kunderne blev viderestillet, fordi de havde komplekse spørgsmål eller bekymringer, som AI-agenten ikke kunne håndtere.",
+    "size" : 3,
+    "conversations" : [ {
+      "id" : "VAR-017",
+      "text" : "Uklart problembeskrivelse",
+      "explanation" : "Kunden beskrev et problem, men var usikker på, hvilken reparation der var nødvendig, og ønskede at tale med en mekaniker."
+    }, {
+      "id" : "VAR-021",
+      "text" : "Uafklaret regningsbeløb",
+      "explanation" : "Kunden var forvirret over en modtaget regning og ønskede en detaljeret forklaring på de enkelte poster."
+    }, {
+      "id" : "VAR-025",
+      "text" : "Uoverensstemmelse i pris",
+      "explanation" : "Kunden var utilfreds med et overslag og ønskede at tale med en medarbejder for at få en detaljeret gennemgang."
+    } ]
+  }, {
+    "id" : 3,
+    "noise" : false,
+    "name" : "Klynge 3: Uklare eller manglende oplysninger",
+    "description" : "Kunderne blev viderestillet, fordi de manglede nødvendige oplysninger eller der var tekniske problemer, der forhindrede agenten i at forstå eller løse deres problem.",
+    "size" : 6,
+    "conversations" : [ {
+      "id" : "VAR-012",
+      "text" : "Dårlig forbindelse",
+      "explanation" : "Forbindelsen var for dårlig til, at agenten kunne forstå kundens problem, hvilket førte til ønske om at tale med en anden."
+    }, {
+      "id" : "VAR-026",
+      "text" : "Henvisning til anden afdeling",
+      "explanation" : "Samtalen handlede om biludlejning, hvilket ikke var inden for agentens ansvarsområde, og derfor blev den viderestillet."
+    }, {
+      "id" : "VAR-033",
+      "text" : "Tekniske problemer med booking",
+      "explanation" : "Systemet oplevede en fejl under bookingprocessen, hvilket frustrerede den, der talte med agenten, og førte til viderestilling."
+    }, {
+      "id" : "VAR-037",
+      "text" : "Manglende registreringsnummer",
+      "explanation" : "Kunden kunne ikke oplyse registreringsnummeret og ønskede derfor at tale med en anden medarbejder."
+    }, {
+      "id" : "VAR-045",
+      "text" : "Dårlig forbindelse",
+      "explanation" : "Samtalen blev afbrudt af dårlig forbindelse, hvilket forhindrede en klar kommunikation og nødvendiggjorde overdragelse."
+    }, {
+      "id" : "VAR-048",
+      "text" : "Manglende oplysninger",
+      "explanation" : "Agenten kunne ikke identificere bilen, da kunden manglede nummerpladen, og ønskede at tale med en medarbejder."
+    } ]
+  }, {
+    "id" : 4,
+    "noise" : false,
+    "name" : "Klynge 4: Ændring af aftaletidspunkt",
+    "description" : "Kunderne ønskede at ændre eller fremskynde deres aftaletidspunkter, hvilket AI-agenten ikke kunne håndtere.",
+    "size" : 3,
+    "conversations" : [ {
+      "id" : "VAR-006",
+      "text" : "Ønske om hurtigere tidspunkt",
+      "explanation" : "Kunden var utilfreds med de tilgængelige tidspunkter og ønskede at tale med en medarbejder for at finde en hurtigere løsning."
+    }, {
+      "id" : "VAR-023",
+      "text" : "Ønske om ændring af tidspunkt",
+      "explanation" : "Agenten kunne ikke imødekomme ønsket om at flytte en eksisterende aftale til et tidligere tidspunkt."
+    }, {
+      "id" : "VAR-030",
+      "text" : "Ønske om tidligere tidspunkt",
+      "explanation" : "Kunden var utilfreds med de tilgængelige tidspunkter og ønskede at tale med en medarbejder for at finde en hurtigere løsning."
+    } ]
+  }, {
+    "id" : 5,
+    "noise" : false,
+    "name" : "Klynge 5: Specifikke kundehenvendelser",
+    "description" : "Kunderne blev viderestillet, fordi de havde specifikke spørgsmål eller ønskede at tale med en bestemt medarbejder om en bestemt service.",
+    "size" : 3,
+    "conversations" : [ {
+      "id" : "VAR-011",
+      "text" : "Høring om bestilling",
+      "explanation" : "Samtalen drejede sig om en eksisterende bestilling, og kunden ønskede at tale med en specialist på området."
+    }, {
+      "id" : "VAR-013",
+      "text" : "Høring om firmadag",
+      "explanation" : "Kunden ønskede information om en firmadag for erhvervskunder og blev derfor viderestillet."
+    }, {
+      "id" : "VAR-049",
+      "text" : "Ønske om at tale med medarbejder",
+      "explanation" : "Kunden ønskede efter aftale om serviceeftersyn at tale direkte med en medarbejder på værkstedet."
+    } ]
+  }, {
+    "id" : 6,
+    "noise" : false,
+    "name" : "Klynge 6: Direkte kontakt ønskes",
+    "description" : "Kunderne ønskede at tale direkte med en medarbejder, typisk for at undgå ventetid eller for at diskutere specifikke emner.",
+    "size" : 2,
+    "conversations" : [ {
+      "id" : "VAR-032",
+      "text" : "Ønske om direkte kontakt",
+      "explanation" : "Kunden ønskede ikke at vente på en opringning og bad om at tale med en medarbejder med det samme."
+    }, {
+      "id" : "VAR-038",
+      "text" : "Ønske om at tale med værksted",
+      "explanation" : "Efter at have ændret en aftale ønskede den talende at diskutere et andet emne direkte med en medarbejder på værkstedet."
+    } ]
+  }, {
+    "id" : 7,
+    "noise" : false,
+    "name" : "Klynge 7: Direkte kontakt med mekaniker",
+    "description" : "Kunderne ønskede at tale direkte med en mekaniker for at få vurderinger eller yderligere information, som AI-agenten ikke kunne håndtere.",
+    "size" : 2,
+    "conversations" : [ {
+      "id" : "VAR-018",
+      "text" : "Ønske om mekanikers vurdering",
+      "explanation" : "Kunden ønskede at tale med en mekaniker for at få et bud på en reparation, da agenten ikke kunne identificere en passende ydelse."
+    }, {
+      "id" : "VAR-044",
+      "text" : "Ønske om at tale med mekaniker",
+      "explanation" : "Kunden ønskede at tale med en mekaniker, selvom aftalen var booket og alle spørgsmål besvaret."
+    } ]
+  }, {
+    "id" : 8,
+    "noise" : false,
+    "name" : "Klynge 8: Komplekse serviceydelser",
+    "description" : "Kunder blev viderestillet, når de havde spørgsmål eller behov, som krævede teknisk ekspertise eller ikke kunne besvares af AI-agenten.",
+    "size" : 2,
+    "conversations" : [ {
+      "id" : "VAR-016",
+      "text" : "Ønske om erstatningsvogn",
+      "explanation" : "Samtalen handlede om muligheden for at få en lånebil, hvilket agenten ikke kunne besvare og derfor viderestillede."
+    }, {
+      "id" : "VAR-034",
+      "text" : "Behov for teknisk vurdering",
+      "explanation" : "Kunden kunne ikke finde en passende serviceydelse til problemet og ønskede en vurdering af en tekniker."
+    } ]
+  }, {
+    "id" : 9,
+    "noise" : false,
+    "name" : "Klynge 9: Akutte bilproblemer",
+    "description" : "Kunder blev viderestillet på grund af alvorlige og øjeblikkelige bilproblemer, der krævede menneskelig assistance.",
+    "size" : 2,
+    "conversations" : [ {
+      "id" : "VAR-035",
+      "text" : "Akut problem med bilen",
+      "explanation" : "Kunden oplevede alvorlige problemer med bilen, der krævede øjeblikkelig assistance fra en medarbejder."
+    }, {
+      "id" : "VAR-050",
+      "text" : "Akut problem med bilen",
+      "explanation" : "Kunden oplevede et pludseligt og farligt problem med bremserne og ønskede hjælp med at få bilen undersøgt."
+    } ]
+  }, {
+    "id" : 10,
+    "noise" : false,
+    "name" : "Klynge 10: Garanti og finansieringsspørgsmål",
+    "description" : "Kunderne blev viderestillet, fordi de havde spørgsmål om garanti, finansiering eller dækning, som AI-agenten ikke kunne besvare.",
+    "size" : 4,
+    "conversations" : [ {
+      "id" : "VAR-008",
+      "text" : "Finansieringsaftale og ansvar",
+      "explanation" : "Kunden ønskede afklaring af betalingsansvar ved skade under en finansieringsaftale og bad om at tale med en anden medarbejder."
+    }, {
+      "id" : "VAR-036",
+      "text" : "Spørgsmål om garanti",
+      "explanation" : "Kunden mente, at en defekt var dækket af garantien, og ønskede at tale med en medarbejder, der kunne vurdere dette."
+    }, {
+      "id" : "VAR-042",
+      "text" : "Spørgsmål om dækning",
+      "explanation" : "Kunden ønskede at få afklaret, om en fejl hører under bilens garantiforsikring, og agenten kunne ikke svare."
+    }, {
+      "id" : "VAR-046",
+      "text" : "Pris- og rabatforespørgsel",
+      "explanation" : "Samtalen blev overført, da agenten ikke kunne besvare spørgsmål om priser og rabatter, hvilket kræver en medarbejders assistance."
+    } ]
+  }, {
+    "id" : 11,
+    "noise" : false,
+    "name" : "Klynge 11: Ønske om specifik medarbejder",
+    "description" : "Kunderne blev viderestillet, fordi de specifikt ønskede at tale med en bestemt medarbejder eller en menneskelig medarbejder generelt.",
+    "size" : 6,
+    "conversations" : [ {
+      "id" : "VAR-009",
+      "text" : "Ønske om specifik medarbejder",
+      "explanation" : "Kunden ønskede at tale med en bestemt medarbejder, som han tidligere har haft kontakt med."
+    }, {
+      "id" : "VAR-019",
+      "text" : "Ønske om specifik medarbejder",
+      "explanation" : "Samtalen blev overført, da den ønskede at tale med en bestemt medarbejder, som agenten ikke kunne lokalisere."
+    }, {
+      "id" : "VAR-029",
+      "text" : "Ønske om specifik medarbejder",
+      "explanation" : "Samtalen blev afbrudt, fordi den ønskede at tale med en bestemt medarbejder, som agenten ikke kunne forbinde direkte."
+    }, {
+      "id" : "VAR-031",
+      "text" : "Ønske om specifik medarbejder",
+      "explanation" : "Kunden ønskede at tale med den værkfører, der var ansvarlig for hans sag, og som han havde aftalt tid med."
+    }, {
+      "id" : "VAR-041",
+      "text" : "Ønske om menneskelig medarbejder",
+      "explanation" : "Samtalen blev afbrudt, da den ønskede at tale med en personlig medarbejder i stedet for en automatiseret agent."
+    }, {
+      "id" : "VAR-043",
+      "text" : "Ønske om menneskelig medarbejder",
+      "explanation" : "Samtalen blev afbrudt, da den ønskede at tale med en menneskelig medarbejder og ikke en automatiseret agent."
+    } ]
+  } ]
+}

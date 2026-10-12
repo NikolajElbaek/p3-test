@@ -1,0 +1,2 @@
+﻿model;samtaler;klynger;andel_stoej;ari_alle;nmi_alle;ari_uden_stoej;nmi_uden_stoej;naermeste_nabo;ari_fast_k;nmi_fast_k;llm_sekunder_pr_samtale;fejl
+gemma3:12b;40;12;0,075;0,335;0,747;0,374;0,769;0,725;0,359;0,786;0,004;""

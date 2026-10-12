@@ -1,0 +1,146 @@
+=== Indstillinger ===
+Pipeline:   REASON_FIRST
+Split:      all (40 samtaler)
+LLM:        gemma3:12b (OLLAMA)
+Embedding:  bge-m3 (OLLAMA)
+Reduktion:  UMAP til 5 dimensioner (4 naboer)
+Clustering: HDBSCAN (minPoints=2, minClusterSize=2)
+
+=== Klynger ===
+
+Støj (passer ikke i nogen klynge) (3 samtaler)
+  Facit: 1 af 3 er 'ongoing_repair' (33%)
+  - VAR-001: Uønsket ventetid på reparation
+      Kunden var utilfreds med de tilgængelige tidspunkter for reparation og ønskede at tale med en medarbejder for at finde en hurtigere løsning.
+  - VAR-010: Usikkerhed om afhentningstidspunkt
+      Agenten kunne ikke svare på spørgsmålet om afhentningstidspunktet og viderestillede derfor for at få det afklaret.
+  - VAR-020: Status på reparation
+      Kunden ønskede at få opdateret status på en igangværende reparation og bad om at tale med en medarbejder.
+
+Klynge 0: Reparationsstatus-opdatering (2 samtaler)
+  Kunder blev viderestillet, fordi de ønskede en opdatering på en igangværende reparation, som AI-agenten ikke kunne give.
+  Facit: 2 af 2 er 'ongoing_repair' (100%)
+  - VAR-007: Status på reparation
+      Kunden ønskede en opdatering på en igangværende reparation, og blev derfor viderestillet.
+  - VAR-039: Status på reparation
+      Kunden ønskede en opdatering på en igangværende reparation, som agenten ikke havde adgang til.
+
+Klynge 1: Komplekse reparationshenvendelser (2 samtaler)
+  Kunderne blev viderestillet, fordi de havde komplekse reparationsbehov eller var utilfredse med AI-agentens svar og ønskede at tale med en menneskelig medarbejder.
+  Facit: 1 af 2 er 'unknown_service' (50%)
+  - VAR-022: Uklare reparationsbehov
+      Kunden beskrev et problem og ønskede at tale med en specialist for at få rådgivning om den rette løsning.
+  - VAR-027: Usikkerhed om reparationstid
+      Kunden ønskede information om reparationstid og kunne ikke acceptere agentens svar, hvilket førte til viderestilling.
+
+Klynge 2: Uafklarede spørgsmål og bekymringer (3 samtaler)
+  Kunderne blev viderestillet, fordi de havde komplekse spørgsmål eller bekymringer, som AI-agenten ikke kunne håndtere.
+  Facit: 2 af 3 er 'price_or_invoice' (67%)
+  - VAR-017: Uklart problembeskrivelse
+      Kunden beskrev et problem, men var usikker på, hvilken reparation der var nødvendig, og ønskede at tale med en mekaniker.
+  - VAR-021: Uafklaret regningsbeløb
+      Kunden var forvirret over en modtaget regning og ønskede en detaljeret forklaring på de enkelte poster.
+  - VAR-025: Uoverensstemmelse i pris
+      Kunden var utilfreds med et overslag og ønskede at tale med en medarbejder for at få en detaljeret gennemgang.
+
+Klynge 3: Uklare eller manglende oplysninger (6 samtaler)
+  Kunderne blev viderestillet, fordi de manglede nødvendige oplysninger eller der var tekniske problemer, der forhindrede agenten i at forstå eller løse deres problem.
+  Facit: 2 af 6 er 'communication_issue' (33%)
+  - VAR-012: Dårlig forbindelse
+      Forbindelsen var for dårlig til, at agenten kunne forstå kundens problem, hvilket førte til ønske om at tale med en anden.
+  - VAR-026: Henvisning til anden afdeling
+      Samtalen handlede om biludlejning, hvilket ikke var inden for agentens ansvarsområde, og derfor blev den viderestillet.
+  - VAR-033: Tekniske problemer med booking
+      Systemet oplevede en fejl under bookingprocessen, hvilket frustrerede den, der talte med agenten, og førte til viderestilling.
+  - VAR-037: Manglende registreringsnummer
+      Kunden kunne ikke oplyse registreringsnummeret og ønskede derfor at tale med en anden medarbejder.
+  - VAR-045: Dårlig forbindelse
+      Samtalen blev afbrudt af dårlig forbindelse, hvilket forhindrede en klar kommunikation og nødvendiggjorde overdragelse.
+
+Klynge 4: Ændring af aftaletidspunkt (3 samtaler)
+  Kunderne ønskede at ændre eller fremskynde deres aftaletidspunkter, hvilket AI-agenten ikke kunne håndtere.
+  Facit: 3 af 3 er 'times_too_late' (100%)
+  - VAR-006: Ønske om hurtigere tidspunkt
+      Kunden var utilfreds med de tilgængelige tidspunkter og ønskede at tale med en medarbejder for at finde en hurtigere løsning.
+  - VAR-023: Ønske om ændring af tidspunkt
+      Agenten kunne ikke imødekomme ønsket om at flytte en eksisterende aftale til et tidligere tidspunkt.
+  - VAR-030: Ønske om tidligere tidspunkt
+      Kunden var utilfreds med de tilgængelige tidspunkter og ønskede at tale med en medarbejder for at finde en hurtigere løsning.
+
+Klynge 5: Specifikke kundehenvendelser (3 samtaler)
+  Kunderne blev viderestillet, fordi de havde specifikke spørgsmål eller ønskede at tale med en bestemt medarbejder om en bestemt service.
+  Facit: 1 af 3 er 'post_completion_transfer' (33%)
+  - VAR-011: Høring om bestilling
+      Samtalen drejede sig om en eksisterende bestilling, og kunden ønskede at tale med en specialist på området.
+  - VAR-013: Høring om firmadag
+      Kunden ønskede information om en firmadag for erhvervskunder og blev derfor viderestillet.
+  - VAR-049: Ønske om at tale med medarbejder
+      Kunden ønskede efter aftale om serviceeftersyn at tale direkte med en medarbejder på værkstedet.
+
+Klynge 6: Direkte kontakt ønskes (2 samtaler)
+  Kunderne ønskede at tale direkte med en medarbejder, typisk for at undgå ventetid eller for at diskutere specifikke emner.
+  Facit: 1 af 2 er 'post_completion_transfer' (50%)
+  - VAR-032: Ønske om direkte kontakt
+      Kunden ønskede ikke at vente på en opringning og bad om at tale med en medarbejder med det samme.
+  - VAR-038: Ønske om at tale med værksted
+      Efter at have ændret en aftale ønskede den talende at diskutere et andet emne direkte med en medarbejder på værkstedet.
+
+Klynge 7: Direkte kontakt med mekaniker (2 samtaler)
+  Kunderne ønskede at tale direkte med en mekaniker for at få vurderinger eller yderligere information, som AI-agenten ikke kunne håndtere.
+  Facit: 1 af 2 er 'post_completion_transfer' (50%)
+  - VAR-018: Ønske om mekanikers vurdering
+      Kunden ønskede at tale med en mekaniker for at få et bud på en reparation, da agenten ikke kunne identificere en passende ydelse.
+  - VAR-044: Ønske om at tale med mekaniker
+      Kunden ønskede at tale med en mekaniker, selvom aftalen var booket og alle spørgsmål besvaret.
+
+Klynge 8: Komplekse serviceydelser (2 samtaler)
+  Kunder blev viderestillet, når de havde spørgsmål eller behov, som krævede teknisk ekspertise eller ikke kunne besvares af AI-agenten.
+  Facit: 1 af 2 er 'other' (50%)
+  - VAR-016: Ønske om erstatningsvogn
+      Samtalen handlede om muligheden for at få en lånebil, hvilket agenten ikke kunne besvare og derfor viderestillede.
+  - VAR-034: Behov for teknisk vurdering
+      Kunden kunne ikke finde en passende serviceydelse til problemet og ønskede en vurdering af en tekniker.
+
+Klynge 9: Akutte bilproblemer (2 samtaler)
+  Kunder blev viderestillet på grund af alvorlige og øjeblikkelige bilproblemer, der krævede menneskelig assistance.
+  Facit: 2 af 2 er 'urgent_issue' (100%)
+  - VAR-035: Akut problem med bilen
+      Kunden oplevede alvorlige problemer med bilen, der krævede øjeblikkelig assistance fra en medarbejder.
+  - VAR-050: Akut problem med bilen
+      Kunden oplevede et pludseligt og farligt problem med bremserne og ønskede hjælp med at få bilen undersøgt.
+
+Klynge 10: Garanti og finansieringsspørgsmål (4 samtaler)
+  Kunderne blev viderestillet, fordi de havde spørgsmål om garanti, finansiering eller dækning, som AI-agenten ikke kunne besvare.
+  Facit: 3 af 4 er 'warranty_case' (75%)
+  - VAR-008: Finansieringsaftale og ansvar
+      Kunden ønskede afklaring af betalingsansvar ved skade under en finansieringsaftale og bad om at tale med en anden medarbejder.
+  - VAR-036: Spørgsmål om garanti
+      Kunden mente, at en defekt var dækket af garantien, og ønskede at tale med en medarbejder, der kunne vurdere dette.
+  - VAR-042: Spørgsmål om dækning
+      Kunden ønskede at få afklaret, om en fejl hører under bilens garantiforsikring, og agenten kunne ikke svare.
+  - VAR-046: Pris- og rabatforespørgsel
+      Samtalen blev overført, da agenten ikke kunne besvare spørgsmål om priser og rabatter, hvilket kræver en medarbejders assistance.
+
+Klynge 11: Ønske om specifik medarbejder (6 samtaler)
+  Kunderne blev viderestillet, fordi de specifikt ønskede at tale med en bestemt medarbejder eller en menneskelig medarbejder generelt.
+  Facit: 4 af 6 er 'specific_employee' (67%)
+  - VAR-009: Ønske om specifik medarbejder
+      Kunden ønskede at tale med en bestemt medarbejder, som han tidligere har haft kontakt med.
+  - VAR-019: Ønske om specifik medarbejder
+      Samtalen blev overført, da den ønskede at tale med en bestemt medarbejder, som agenten ikke kunne lokalisere.
+  - VAR-029: Ønske om specifik medarbejder
+      Samtalen blev afbrudt, fordi den ønskede at tale med en bestemt medarbejder, som agenten ikke kunne forbinde direkte.
+  - VAR-031: Ønske om specifik medarbejder
+      Kunden ønskede at tale med den værkfører, der var ansvarlig for hans sag, og som han havde aftalt tid med.
+  - VAR-041: Ønske om menneskelig medarbejder
+      Samtalen blev afbrudt, da den ønskede at tale med en personlig medarbejder i stedet for en automatiseret agent.
+
+=== Evaluering mod facit (transfer_classification) ===
+Fundne klynger: 12   Sande årsager i data: 14   Andel støj: 8%
+ARI alle punkter: 0,335   NMI alle punkter: 0,747
+ARI uden støj:    0,374   NMI uden støj:    0,769
+(1.0 = samme gruppering som facit, 0 = ikke bedre end tilfældigt)
+
+=== Evaluering uden HDBSCAN (på de fulde embeddings) ===
+Nærmeste nabo har samme facit: 73%
+Fast antal klynger (14): ARI 0,359   NMI 0,786
